@@ -1,14 +1,11 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Git Checkout') {
-            steps {
-              git branch: 'main', url: 'https://github.com/advikpadhye/Shopping-Cart-new.git'
-            }
-        }
-        
-        stage('Compile the Code') {
+    tools {
+        maven 'maven3'
+        jdk 'jdk17'
+    }
+       stage('Compile the Code') {
             steps {
               sh "mvn clean compile"
             }
