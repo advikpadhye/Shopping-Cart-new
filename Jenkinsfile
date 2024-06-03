@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-              git branch: 'main', url: 'https://github.com/advikpadhye/Shopping-Cart-new.git'
+              git branch: 'feature', url: 'https://github.com/advikpadhye/Shopping-Cart-new.git'
             }
         }
         
